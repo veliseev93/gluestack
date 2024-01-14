@@ -1,114 +1,40 @@
 import { createStyle } from '@gluestack-style/react';
 
 export const Text = createStyle({
-  color: '$textLight700',
-  _dark: {
-    color: '$textDark200',
-  },
-  fontWeight: '$normal',
-  fontFamily: '$body',
-  fontStyle: 'normal',
-  letterSpacing: '$md',
+  color: '$textColor',
+  fontFamily: 'SFProDisplayBold',
 
   variants: {
-    isTruncated: {
-      true: {
-        props: {
-          // @ts-ignore
-          numberOfLines: 1,
-          ellipsizeMode: 'tail',
-        },
-      },
-    },
-    bold: {
-      true: {
-        fontWeight: '$bold',
-      },
-    },
-    underline: {
-      true: {
-        textDecorationLine: 'underline',
-      },
-    },
-    strikeThrough: {
-      true: {
-        textDecorationLine: 'line-through',
-      },
-    },
-    sub: {
-      true: {
-        fontSize: '$xs',
-        lineHeight: '$xs',
-      },
-    },
-    italic: {
-      true: {
-        fontStyle: 'italic',
-      },
-    },
-    highlight: {
-      true: {
-        bg: '$yellow500',
-      },
-    },
     size: {
-      '2xs': {
-        fontSize: '$2xs',
-        lineHeight: '$2xs',
+      smallest: {
+        fontSize: '$smallest',
+        lineHeight: '$smallest',
+        fontFamily: 'SFProTextRegular',
       },
-      'xs': {
-        fontSize: '$xs',
-        lineHeight: '$sm',
+      small: {
+        fontSize: '$small',
+        lineHeight: '$small',
+        fontFamily: 'SFProTextRegular',
       },
-
-      'sm': {
-        fontSize: '$sm',
-        lineHeight: '$sm',
+      medium: {
+        fontSize: '$medium',
+        lineHeight: '$medium',
+        fontFamily: 'SFProTextRegular',
       },
-
-      'md': {
-        fontSize: '$md',
-        lineHeight: '$md',
+      larger: {
+        fontSize: '$larger',
+        lineHeight: '$larger',
+        fontFamily: 'SFProDisplayBold',
       },
-
-      'lg': {
-        fontSize: '$lg',
-        lineHeight: '$xl',
-      },
-
-      'xl': {
-        fontSize: '$xl',
-        lineHeight: '$xl',
-      },
-
-      '2xl': {
-        fontSize: '$2xl',
-        lineHeight: '$2xl',
-      },
-
-      '3xl': {
-        fontSize: '$3xl',
-        lineHeight: '$3xl',
-      },
-
-      '4xl': {
-        fontSize: '$4xl',
-        lineHeight: '$4xl',
-      },
-
-      '5xl': {
-        fontSize: '$5xl',
-        lineHeight: '$6xl',
-      },
-
-      '6xl': {
-        fontSize: '$6xl',
-        lineHeight: '$7xl',
+      largest: {
+        fontSize: '$largest',
+        lineHeight: '$largest',
+        fontFamily: 'SFProDisplayBold',
       },
     },
   },
 
   defaultProps: {
-    size: 'md',
+    size: 'medium',
   },
 });
